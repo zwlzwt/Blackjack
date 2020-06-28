@@ -6,8 +6,8 @@
 * Card file import card data and maintain it
 
 ## Preview
-![screenshot](img/screenshot.png)
-![screenshot](img/screenshot_1.png)
+![screenshot](img/screenShot.png)
+![screenshot](img/screenShot_1.png)
 
 ### `npm install`
 
