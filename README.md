@@ -1,3 +1,16 @@
+## Architecture introduction
+* I only used react and the styled-component framework, not any third-party component libraries and dependent libraries
+
+* Split components into components folder, use redux thought to split logic into reducer, which is convenient for unit testing and logic modification
+
+* Card file import card data and maintain it
+
+## Preview
+![screenshot](img/screenshot.png)
+![screenshot](img/screenshot_1.png)
+
+### `npm install`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -11,11 +24,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
