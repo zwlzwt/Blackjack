@@ -24,6 +24,7 @@ function reducer(state, action) {
           minBet: action.minBet
         }
       }
+      break;
     case 'initalDark':
       return {
         ...state,

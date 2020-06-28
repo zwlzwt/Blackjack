@@ -3,7 +3,18 @@
 
 * Split components into components folder, use redux thought to split logic into reducer, which is convenient for unit testing and logic modification
 
+  * App.js --------> Gather all the components and subscribe to the change of points brought by each card change
+  * index.js -------> Mount the react application and reset the css style
+  * bettingTable.js ------> Display chip table
+  * cardList.js -----> Show cards and points
+  * controller.js -------> Core logic, shuffle, deal, and buy off
+  * gameTable.js ------> Subscription game status changes
+  * message.js -------> Notify the status of the game after the end
+  * settingModal.js -----> Set chips and minimum bet
+
 * Card file import card data and maintain it
+
+
 
 ## Preview
 ![screenshot](img/screenShot.png)

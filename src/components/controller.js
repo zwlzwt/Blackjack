@@ -134,7 +134,7 @@ function Controller({
     if (dealerScore < 17) {
       return;
     }
-    dispatch({ type: 'status', msg: checkDealerStatus(dealerCards, playerTotal) })
+    dispatch({ type: 'status', msg: checkDealerStatus(dealerCards, playerTotal)})
   }
 
   return (
