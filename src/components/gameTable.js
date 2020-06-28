@@ -29,8 +29,15 @@ function GameTable({
 }) {
 
   useEffect(() => {
+    let timeID
     if(status) {
-      dispatch({ type: 'status', msg: status })
+      timeID = window.setTimeout(() => {
+        dispatch({ type: 'status', msg: status })
+        
+      }, 800);
+    }
+    return () => {
+      window.clearTimeout(timeID);
     }
   }, [dispatch, status])
 

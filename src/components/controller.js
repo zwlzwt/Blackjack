@@ -71,6 +71,7 @@ function Controller({
 
   useEffect(() => {
     const newDeck = checkDeck(deck);
+    let timeID
     let playerTotal = Math.max(playerScore, playerMinScore)
     if (playerTotal > 21) {
       playerTotal = Math.min(playerScore, playerMinScore);
@@ -82,9 +83,14 @@ function Controller({
         dealerCards: drawCards(newDeck, dealerCards, 1)
       })
     } else if(dealerScore >= 17 && dealerScore <=21 && stand) {
-      dispatch({ type: 'status', msg: checkDealerStatus(dealerCards, playerTotal) })
+      timeID = window.setTimeout(() => {
+        dispatch({ type: 'status', msg: checkDealerStatus(dealerCards, playerTotal) })
+      }, 800);      
     } else {
       return;
+    }
+    return () => {
+      window.clearTimeout(timeID);
     }
   }, [dealerScore, stand])
 
@@ -127,14 +133,6 @@ function Controller({
   const handleStand = () => {
     dispatch({ type: 'stand' })
     dispatch({ type: 'mergeCards' })
-    let playerTotal = Math.max(playerScore, playerMinScore)
-    if (playerTotal > 21) {
-      playerTotal = Math.min(playerScore, playerMinScore);
-    }
-    if (dealerScore < 17) {
-      return;
-    }
-    dispatch({ type: 'status', msg: checkDealerStatus(dealerCards, playerTotal)})
   }
 
   return (
