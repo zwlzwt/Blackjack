@@ -89,7 +89,6 @@ function App() {
 
     return status
   }
-  console.log(state)
 
   const playerScore = calcCardTotal(state.playerCards, true)
   const playerMinScore = calcCardTotal(state.playerCards, false)
