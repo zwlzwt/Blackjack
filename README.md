@@ -11,6 +11,7 @@
   * gameTable.js ------> Subscription game status changes
   * message.js -------> Notify the status of the game after the end
   * settingModal.js -----> Set chips and minimum bet
+  * reducer.js ------> Manage control logic and state
 
 * Card file import card data and maintain it
 
