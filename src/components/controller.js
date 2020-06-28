@@ -86,8 +86,6 @@ function Controller({
       timeID = window.setTimeout(() => {
         dispatch({ type: 'status', msg: checkDealerStatus(dealerCards, playerTotal) })
       }, 800);      
-    } else {
-      return;
     }
     return () => {
       window.clearTimeout(timeID);
